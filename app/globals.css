@@ -689,6 +689,27 @@
       font-size: 14px;
     }
 
+    .arrival-fieldset {
+      display: grid;
+      gap: 8px;
+      padding: 14px;
+      border: 1px solid rgba(63, 143, 128, 0.22);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.62);
+    }
+
+    .fieldset-title {
+      color: #405056;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .field-hint {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
     input,
     select,
     textarea {

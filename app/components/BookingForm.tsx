@@ -1,10 +1,40 @@
 'use client';
 
+const timeSlots = [
+  '10:00',
+  '10:30',
+  '11:00',
+  '11:30',
+  '12:00',
+  '12:30',
+  '13:00',
+  '13:30',
+  '14:00',
+  '14:30',
+  '15:00',
+  '15:30',
+  '16:00',
+  '16:30',
+  '17:00',
+  '17:30',
+  '18:00',
+  '18:30',
+  '19:00',
+  '19:30',
+  '20:00',
+];
+
+function getTodayValue() {
+  return new Date().toISOString().split('T')[0];
+}
+
 export function BookingForm() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     window.alert('预约信息已记录，门店会尽快联系您。');
   }
+
+  const today = getTodayValue();
 
   return (
     <form onSubmit={handleSubmit}>
@@ -35,9 +65,23 @@ export function BookingForm() {
                 </select>
               </label>
             </div>
-            <label>期望时间
-              <input type="text" name="time" placeholder="例如：本周六下午 3 点" />
-            </label>
+            <div className="arrival-fieldset">
+              <span className="fieldset-title">期望到店时间</span>
+              <div className="form-row">
+                <label>到店日期
+                  <input type="date" name="arrivalDate" min={today} required />
+                </label>
+                <label>到店时间
+                  <select name="arrivalTime" required>
+                    <option value="">请选择</option>
+                    {timeSlots.map((slot) => (
+                      <option key={slot} value={slot}>{slot}</option>
+                    ))}
+                  </select>
+                </label>
+              </div>
+              <p className="field-hint">营业时间 10:00 - 21:00，门店会按所选时间确认最终时段。</p>
+            </div>
             <label>备注
               <textarea name="note" placeholder="宠物年龄、体重、是否怕吹风、是否有皮肤问题等"></textarea>
             </label>
