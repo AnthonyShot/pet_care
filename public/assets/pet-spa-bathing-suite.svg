@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 960" role="img" aria-labelledby="title desc">
+  <title id="title">Luxury pet bathing suite</title>
+  <desc id="desc">A calm high-end pet grooming bathing room with marble walls, glass partitions, brass fixtures, and soft warm lighting.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f6efe3"/>
+      <stop offset="0.55" stop-color="#dfefe9"/>
+      <stop offset="1" stop-color="#f8f4ea"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#e7ded0"/>
+      <stop offset="1" stop-color="#bfcbc6"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" x2="1">
+      <stop offset="0" stop-color="#eef9fa" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#b9d7df" stop-opacity=".42"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#1c3033" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1440" height="960" fill="url(#wall)"/>
+  <path d="M0 690h1440v270H0z" fill="url(#floor)"/>
+  <path d="M0 690h1440" stroke="#fffaf0" stroke-width="4" opacity=".65"/>
+  <g opacity=".28" stroke="#b4c6c0" stroke-width="2">
+    <path d="M110 95h520M760 120h410M160 210h260M790 255h500M70 380h450M660 410h610"/>
+    <path d="M250 0v690M640 0v690M1050 0v690" opacity=".4"/>
+  </g>
+  <g filter="url(#soft)">
+    <rect x="180" y="210" width="410" height="455" rx="28" fill="#fffdf8"/>
+    <rect x="216" y="255" width="338" height="246" rx="22" fill="#dbece8"/>
+    <rect x="238" y="278" width="294" height="202" rx="18" fill="url(#glass)"/>
+    <rect x="245" y="520" width="280" height="64" rx="20" fill="#f6efe3"/>
+    <path d="M282 548h206" stroke="#b9834d" stroke-width="13" stroke-linecap="round"/>
+    <path d="M382 263v-58c0-38 26-68 65-68h35" fill="none" stroke="#b9834d" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="516" cy="140" r="18" fill="#b9834d"/>
+    <path d="M472 584c18 33 65 38 95 11 18-16 24-41 17-62-20 44-77 40-112 51Z" fill="#fff" opacity=".76"/>
+  </g>
+  <g filter="url(#soft)">
+    <rect x="700" y="170" width="560" height="485" rx="30" fill="#fdfbf5"/>
+    <rect x="736" y="218" width="220" height="365" rx="22" fill="url(#glass)"/>
+    <rect x="982" y="218" width="242" height="365" rx="22" fill="url(#glass)"/>
+    <path d="M720 610h520" stroke="#d4b57a" stroke-width="18" stroke-linecap="round"/>
+    <path d="M822 298c20-48 92-48 114 0 15 33 4 85-57 120-61-35-72-87-57-120Z" fill="#f4c89a" opacity=".92"/>
+    <circle cx="858" cy="332" r="10" fill="#26383a"/>
+    <circle cx="905" cy="332" r="10" fill="#26383a"/>
+    <path d="M872 366c16 14 30 14 45 0" fill="none" stroke="#26383a" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <g opacity=".9">
+    <circle cx="1118" cy="94" r="42" fill="#ffd36a" opacity=".8"/>
+    <circle cx="1182" cy="132" r="25" fill="#ffffff" opacity=".65"/>
+    <circle cx="1265" cy="90" r="16" fill="#ffffff" opacity=".7"/>
+  </g>
+</svg>

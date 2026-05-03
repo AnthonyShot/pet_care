@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 620" role="img" aria-labelledby="title desc">
+  <title id="title">广州市荔湾区汾水花园宠物店位置地图</title>
+  <desc id="desc">海盗冒险漫画风格地图，使用海贼旗标记门店位于汾水花园南侧入口附近。</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff3c7"/>
+      <stop offset=".52" stop-color="#f9df99"/>
+      <stop offset="1" stop-color="#efbf65"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#7ed0df"/>
+      <stop offset="1" stop-color="#2c91b3"/>
+    </linearGradient>
+    <filter id="drop" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#2a1709" flood-opacity=".28"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grain" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M2 22c7-4 14-5 23-1M8 7c5 3 12 3 18 0" fill="none" stroke="#9a6531" stroke-width="1.6" opacity=".16"/>
+    </pattern>
+    <style>
+      .label{font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;font-weight:900;letter-spacing:0}
+      .small{font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;font-weight:800;letter-spacing:0}
+      .road{fill:none;stroke:#fff7df;stroke-width:42;stroke-linecap:round;stroke-linejoin:round}
+      .road-line{fill:none;stroke:#c08435;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:16 16;opacity:.7}
+      .outline{stroke:#3a2415;stroke-width:7;stroke-linejoin:round}
+    </style>
+  </defs>
+
+  <rect x="12" y="12" width="1016" height="596" rx="34" fill="url(#paper)" class="outline"/>
+  <rect x="12" y="12" width="1016" height="596" rx="34" fill="url(#grain)"/>
+
+  <path d="M-30 118 C132 44 280 72 400 118 C548 174 660 156 810 88 C930 34 1002 26 1080 46 L1080 -40 L-30 -40 Z" fill="url(#sea)" opacity=".84"/>
+  <path d="M-20 142 C132 72 270 92 392 136 C544 190 678 174 820 112 C928 64 1010 54 1074 78" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity=".72"/>
+  <text x="64" y="82" class="small" font-size="24" fill="#073b52">花地河航道</text>
+
+  <g opacity=".96">
+    <path class="road" d="M70 504 H952"/>
+    <path class="road-line" d="M70 504 H952"/>
+    <text x="640" y="486" class="label" font-size="30" fill="#5a3215">茶滘路</text>
+
+    <path class="road" d="M92 346 C210 328 310 342 394 390 C500 450 650 448 818 390 C908 360 976 364 1030 386"/>
+    <path class="road-line" d="M92 346 C210 328 310 342 394 390 C500 450 650 448 818 390 C908 360 976 364 1030 386"/>
+
+    <path class="road" d="M238 584 C254 492 260 398 244 316 C228 232 238 160 300 96"/>
+    <path class="road-line" d="M238 584 C254 492 260 398 244 316 C228 232 238 160 300 96"/>
+    <text x="274" y="300" class="small" font-size="23" fill="#6a431f" transform="rotate(-81 274 300)">园区西路</text>
+
+    <path class="road" d="M372 560 C356 458 374 362 432 276 C494 184 490 112 452 48"/>
+    <path class="road-line" d="M372 560 C356 458 374 362 432 276 C494 184 490 112 452 48"/>
+    <text x="448" y="246" class="small" font-size="23" fill="#6a431f" transform="rotate(-58 448 246)">东门通道</text>
+
+    <path class="road" d="M760 582 C782 482 784 392 742 318 C698 242 708 150 760 66"/>
+    <path class="road-line" d="M760 582 C782 482 784 392 742 318 C698 242 708 150 760 66"/>
+    <text x="782" y="352" class="small" font-size="22" fill="#6a431f" transform="rotate(78 782 352)">茶滘大街</text>
+  </g>
+
+  <g filter="url(#drop)">
+    <path d="M110 188 L296 128 L424 196 L408 350 L246 404 L102 332 Z" fill="#bde8d6" class="outline"/>
+    <path d="M146 222 L288 176 L378 220 L364 316 L246 354 L138 304 Z" fill="#8fdbbd" stroke="#3f8f80" stroke-width="5"/>
+    <text x="162" y="270" class="label" font-size="33" fill="#174a3c">力诚汾水花园</text>
+    <text x="188" y="315" class="small" font-size="22" fill="#245a51">住宅区</text>
+    <rect x="122" y="372" width="80" height="34" rx="17" fill="#ffffff" stroke="#3a2415" stroke-width="4"/>
+    <text x="140" y="397" class="small" font-size="19" fill="#243034">南门</text>
+    <rect x="360" y="374" width="88" height="34" rx="17" fill="#ffffff" stroke="#3a2415" stroke-width="4"/>
+    <text x="380" y="399" class="small" font-size="19" fill="#243034">东2门</text>
+  </g>
+
+  <g filter="url(#drop)">
+    <path d="M470 456 L672 426 L790 486 L738 574 L516 578 Z" fill="#d9eef3" stroke="#3a2415" stroke-width="6"/>
+    <text x="514" y="516" class="label" font-size="28" fill="#245b65">鸿图苑小学</text>
+    <text x="534" y="552" class="small" font-size="18" fill="#637074">到店参考地标</text>
+  </g>
+
+  <g filter="url(#drop)">
+    <path d="M642 160 L842 120 L922 238 L822 318 L652 276 Z" fill="#ddebf5" stroke="#3a2415" stroke-width="6"/>
+    <text x="690" y="214" class="label" font-size="28" fill="#415d80">汾水逸腾轩</text>
+    <text x="720" y="250" class="small" font-size="18" fill="#637074">北侧参照</text>
+  </g>
+
+  <g filter="url(#drop)">
+    <rect x="58" y="40" width="420" height="112" rx="22" fill="#fffaf0" stroke="#3a2415" stroke-width="6"/>
+    <text x="88" y="86" class="label" font-size="30" fill="#243034">广州市荔湾区汾水花园</text>
+    <text x="88" y="125" class="small" font-size="20" fill="#6d4a22">店铺在南侧入口附近，按箭头位置标记</text>
+  </g>
+
+  <g filter="url(#glow)">
+    <circle cx="302" cy="394" r="76" fill="#ffd36a" opacity=".55"/>
+    <circle cx="302" cy="394" r="48" fill="#f48f7b" opacity=".72"/>
+  </g>
+
+  <g filter="url(#drop)" transform="translate(302 394)">
+    <path d="M-12 126 L-12 -112" stroke="#3a2415" stroke-width="11" stroke-linecap="round"/>
+    <path d="M-6 -104 C38 -128 90 -112 128 -132 L128 -42 C82 -24 38 -44 -6 -22 Z" fill="#111820" stroke="#3a2415" stroke-width="7" stroke-linejoin="round"/>
+    <circle cx="58" cy="-78" r="25" fill="#fffaf0"/>
+    <path d="M38 -41 L78 -115 M78 -41 L38 -115" stroke="#fffaf0" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="48" cy="-80" r="4" fill="#111820"/>
+    <circle cx="68" cy="-80" r="4" fill="#111820"/>
+    <path d="M48 -65c8 6 17 6 25 0" fill="none" stroke="#111820" stroke-width="4" stroke-linecap="round"/>
+    <path d="M-62 22 C-26 -18 28 -24 70 8 C112 40 112 92 82 124 C44 164 -22 142 -54 100" fill="#fffaf0" stroke="#3a2415" stroke-width="7"/>
+    <path d="M-28 66c18-30 64-30 82 0" fill="none" stroke="#f48f7b" stroke-width="12" stroke-linecap="round"/>
+    <text x="12" y="52" class="label" font-size="25" fill="#243034">泡泡爪</text>
+    <text x="-2" y="86" class="label" font-size="23" fill="#3f8f80">宠物洗护店</text>
+  </g>
+
+  <g filter="url(#drop)">
+    <path d="M210 452 C236 418 258 402 302 394" fill="none" stroke="#d52121" stroke-width="13" stroke-linecap="round"/>
+    <path d="M302 394 l-52 -5 l24 46 Z" fill="#d52121" stroke="#3a2415" stroke-width="5" stroke-linejoin="round"/>
+    <text x="64" y="474" class="label" font-size="31" fill="#d52121">从南侧路口进入</text>
+  </g>
+
+  <g opacity=".96">
+    <circle cx="928" cy="92" r="35" fill="#f48f7b" stroke="#3a2415" stroke-width="6"/>
+    <path d="M912 100c8-17 24-17 32 0" fill="none" stroke="#fffaf0" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="918" cy="82" r="6" fill="#fffaf0"/>
+    <circle cx="938" cy="82" r="6" fill="#fffaf0"/>
+    <text x="846" y="150" class="small" font-size="20" fill="#6d4a22">宠物友好地图</text>
+  </g>
+</svg>
