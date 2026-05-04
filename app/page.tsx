@@ -1,6 +1,57 @@
 import { BookingForm } from './components/BookingForm';
 import { FallbackImage } from './components/FallbackImage';
 
+const customerReviews = [
+  {
+    initial: '林',
+    name: '林女士',
+    pet: '柯基',
+    text: '我家狗狗胆子小，店员会慢慢安抚，全程没有催促。洗完回家状态很放松，毛也蓬松干净。',
+  },
+  {
+    initial: '周',
+    name: '周先生',
+    pet: '布偶猫',
+    text: '猫咪洗护前会先确认身体情况，接回家耳朵、脚垫和尾巴都处理得很细，照片反馈也很及时。',
+  },
+  {
+    initial: '陈',
+    name: '陈女士',
+    pet: '比熊',
+    text: '造型会先沟通，不会剪得太夸张。圆头修得很自然，朋友都问是不是换了一家更专业的店。',
+  },
+  {
+    initial: '许',
+    name: '许先生',
+    pet: '金毛',
+    text: '大狗吹干最怕敷衍，这次底毛摸起来很干爽，没有潮味。护理师还提醒了换季掉毛的梳理频率。',
+  },
+  {
+    initial: '吴',
+    name: '吴女士',
+    pet: '英短',
+    text: '店里猫狗分区让我安心很多。猫咪回来没有应激躲床底，指甲剪得圆滑，抱起来也香香的。',
+  },
+  {
+    initial: '赵',
+    name: '赵女士',
+    pet: '雪纳瑞',
+    text: '眉毛和胡子修得很有精神，细节比以前去过的店更稳定。预约制不用等太久，这点很加分。',
+  },
+  {
+    initial: '梁',
+    name: '梁先生',
+    pet: '柴犬',
+    text: '洗护前会记录皮肤泛红的位置，洗完还给了观察建议。服务不是只追求好看，真的有在看宠物状态。',
+  },
+  {
+    initial: '何',
+    name: '何女士',
+    pet: '贵宾',
+    text: '每次接回家都能看到护理记录，哪里打结、哪里需要多梳都会说清楚，长期养护特别省心。',
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -181,24 +232,27 @@ export default function Home() {
           <section className="reviews" id="reviews" aria-labelledby="reviews-title">
             <div className="section-head">
               <h2 id="reviews-title">顾客反馈</h2>
-              <p>好的洗护不是只看照片，还要看宠物回家后的状态。</p>
+              <p>好的洗护不只看照片，还要看宠物回家后的状态、气味、细节和主人是否真的省心。</p>
             </div>
-            <div className="review-grid">
-              <article className="review-card">
-                <div className="stars" aria-label="五星评价">★★★★★</div>
-                <p>我家狗胆子小，店员会慢慢安抚，洗完没有一直躲，毛也很蓬松。</p>
-                <div className="reviewer"><span className="avatar">林</span>林女士 · 柯基</div>
-              </article>
-              <article className="review-card">
-                <div className="stars" aria-label="五星评价">★★★★★</div>
-                <p>猫咪洗护前会确认身体情况，接回家耳朵和脚垫都处理得很干净。</p>
-                <div className="reviewer"><span className="avatar">周</span>周先生 · 布偶猫</div>
-              </article>
-              <article className="review-card">
-                <div className="stars" aria-label="五星评价">★★★★★</div>
-                <p>造型会先沟通，不会剪得太夸张。照片反馈很及时，省心。</p>
-                <div className="reviewer"><span className="avatar">陈</span>陈女士 · 比熊</div>
-              </article>
+            <div className="review-grid" aria-label="顾客评价轮播">
+              <div className="review-track">
+                {[...customerReviews, ...customerReviews].map((review, index) => (
+                  <article className="review-card" key={`${review.name}-${index}`}>
+                    <div className="stars" aria-label="五星评价">★★★★★</div>
+                    <p>{review.text}</p>
+                    <div className="reviewer">
+                      <span className="avatar">{review.initial}</span>
+                      <span>{review.name} · {review.pet}</span>
+                    </div>
+                  </article>
+                ))}
+              </div>
+              <div className="review-indicators" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </div>
           </section>
       

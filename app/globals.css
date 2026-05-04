@@ -386,8 +386,7 @@
     }
 
     .service-grid,
-    .price-grid,
-    .review-grid {
+    .price-grid {
       display: grid;
       max-width: 1120px;
       margin: 0 auto;
@@ -571,13 +570,72 @@
     }
 
     .review-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 72px 34px;
+      overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent 0, #000 12%, #000 88%, transparent 100%);
+    }
+
+    .review-grid::before,
+    .review-grid::after {
+      position: absolute;
+      top: calc(50% - 32px);
+      z-index: 2;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 30px;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .review-grid::before {
+      left: 12px;
+      content: "‹";
+    }
+
+    .review-grid::after {
+      right: 12px;
+      content: "›";
+    }
+
+    .review-track {
+      display: flex;
+      width: max-content;
+      gap: 22px;
+      animation: review-marquee 34s ease-in-out infinite;
+    }
+
+    .review-grid:hover .review-track {
+      animation-play-state: paused;
     }
 
     .review-card {
-      padding: 24px;
+      flex: 0 0 min(68vw, 560px);
+      min-height: 270px;
+      padding: clamp(24px, 4vw, 34px);
       background: rgba(255, 255, 255, 0.07);
       border-color: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+      backdrop-filter: blur(8px);
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.26);
+    }
+
+    .review-card p {
+      font-size: 17px;
     }
 
     .stars {
@@ -604,6 +662,80 @@
       place-items: center;
       background: var(--coral);
       color: #fff;
+    }
+
+    .review-indicators {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      display: flex;
+      gap: 8px;
+      transform: translateX(-50%);
+    }
+
+    .review-indicators span {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.32);
+      animation: review-dot 8.5s infinite;
+    }
+
+    .review-indicators span:nth-child(2) {
+      animation-delay: 2.125s;
+    }
+
+    .review-indicators span:nth-child(3) {
+      animation-delay: 4.25s;
+    }
+
+    .review-indicators span:nth-child(4) {
+      animation-delay: 6.375s;
+    }
+
+    @keyframes review-marquee {
+      0%, 10% {
+        transform: translateX(0);
+      }
+      18%, 30% {
+        transform: translateX(calc(-12.5% - 11px));
+      }
+      38%, 50% {
+        transform: translateX(calc(-25% - 11px));
+      }
+      58%, 70% {
+        transform: translateX(calc(-37.5% - 11px));
+      }
+      78%, 100% {
+        transform: translateX(calc(-50% - 11px));
+      }
+    }
+
+    @keyframes review-dot {
+      0%, 22% {
+        width: 26px;
+        background: var(--yellow);
+      }
+      26%, 100% {
+        width: 8px;
+        background: rgba(255, 255, 255, 0.32);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .review-grid {
+        overflow-x: auto;
+        mask-image: none;
+      }
+
+      .review-track {
+        animation: none;
+        padding-bottom: 6px;
+      }
+
+      .review-indicators {
+        display: none;
+      }
     }
 
     .booking {
@@ -766,8 +898,7 @@
 
       .service-grid,
       .steps,
-      .price-grid,
-      .review-grid {
+      .price-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
@@ -800,9 +931,23 @@
       .service-grid,
       .steps,
       .price-grid,
-      .review-grid,
       .form-row {
         grid-template-columns: 1fr;
+      }
+
+      .review-grid {
+        padding-inline: 34px;
+        mask-image: linear-gradient(90deg, transparent 0, #000 4%, #000 96%, transparent 100%);
+      }
+
+      .review-grid::before,
+      .review-grid::after {
+        display: none;
+      }
+
+      .review-card {
+        flex-basis: min(76vw, 340px);
+        min-height: 292px;
       }
 
       .section-head {
