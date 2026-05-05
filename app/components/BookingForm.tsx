@@ -1,6 +1,14 @@
 'use client';
 
 export function BookingForm() {
+  const defaultArrivalTime = (() => {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}T09:30`;
+  })();
+
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     window.alert('预约信息已记录，门店会尽快联系您。');
@@ -35,8 +43,8 @@ export function BookingForm() {
                 </select>
               </label>
             </div>
-            <label>期望时间
-              <input type="text" name="time" placeholder="例如：本周六下午 3 点" />
+            <label>期望到店日期
+              <input type="datetime-local" name="time" defaultValue={defaultArrivalTime} />
             </label>
             <label>备注
               <textarea name="note" placeholder="宠物年龄、体重、是否怕吹风、是否有皮肤问题等"></textarea>
